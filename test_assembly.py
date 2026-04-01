@@ -13,13 +13,13 @@ CHARACTERS = {
         "name": "Peter Griffin",
         "image": str(BASE_DIR / "characters/peter.png"),
         "voice": "en-US-GuyNeural",
-        "rate": "-10%",
+        "rate": "+10%",  # mais rápido para ritmo de shorts
     },
     "stewie": {
         "name": "Stewie Griffin",
         "image": str(BASE_DIR / "characters/stewie.png"),
         "voice": "en-US-ChristopherNeural",
-        "rate": "+8%",
+        "rate": "+15%",  # Stewie fala mais depressa
     },
 }
 
@@ -58,11 +58,28 @@ async def generate_tts(dialogue, cache_dir):
     return dialogue
 
 
+FFMPEG = Path.home() / ".local/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
+
+
+def strip_silence(input_path, output_path):
+    """Remove apenas silêncio nos extremos (threshold conservador para não cortar fala)."""
+    import subprocess
+    result = subprocess.run([
+        str(FFMPEG), "-y", "-i", input_path,
+        "-af", "silenceremove=start_periods=1:start_silence=0.05:start_threshold=-55dB:stop_periods=1:stop_silence=0.05:stop_threshold=-55dB",
+        output_path
+    ], capture_output=True)
+    # Se falhar, usar ficheiro original
+    import os
+    if not os.path.exists(output_path) or os.path.getsize(output_path) < 1000:
+        import shutil
+        shutil.copy(input_path, output_path)
+
+
 def get_audio_duration(path):
     import subprocess
-    ffmpeg = Path.home() / ".local/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
     result = subprocess.run(
-        [str(ffmpeg), "-i", path, "-f", "null", "-"],
+        [str(FFMPEG), "-i", path, "-f", "null", "-"],
         capture_output=True, text=True
     )
     for line in result.stderr.split("\n"):
