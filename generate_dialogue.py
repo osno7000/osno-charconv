@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 osno-charconv: gerador de vídeos de diálogo entre personagens.
-Protótipo com edge-tts (vozes genéricas) — upgrade para Fish Audio API later.
+Usa Fish Audio API para vozes realistas de Peter/Stewie.
 
 Formato: Peter Griffin / Stewie Griffin debatem um tópico random/viral.
 Imagem do personagem aparece enquanto fala. Fundo = gameplay footage.
@@ -11,25 +11,29 @@ import random
 import asyncio
 import subprocess
 import os
+import requests
 from pathlib import Path
 
-import anthropic
-
 # ── Config ──────────────────────────────────────────────────────────────────
+
+FISH_API_URL = "https://api.fish.audio/v1/tts"
+FISH_KEY_PATH = Path.home() / "mind/credentials/fish_audio_api_key.txt"
 
 CHARACTERS = {
     "peter": {
         "name": "Peter Griffin",
         "image": "characters/peter.png",
-        "voice": "en-US-GuyNeural",   # voz masculina grave
-        "rate": "-5%",                 # mais lento, mais estúpido
+        "voice": "en-US-GuyNeural",        # fallback edge-tts
+        "rate": "-5%",
+        "fish_voice_id": "e34b4e061b874623a08f41e5c4fecfb9",  # Peter Griffin Fish Audio
         "color": (70, 130, 180),
     },
     "stewie": {
         "name": "Stewie Griffin",
         "image": "characters/stewie.png",
-        "voice": "en-US-RyanMultilingualNeural",  # voz mais articulada
-        "rate": "+10%",                             # ligeiramente mais rápido
+        "voice": "en-US-RyanMultilingualNeural",  # fallback edge-tts
+        "rate": "+10%",
+        "fish_voice_id": "e91c4f5974f149478a35affe820d02ac",  # Stewie Griffin Fish Audio
         "color": (200, 60, 60),
     },
 }
@@ -50,9 +54,7 @@ BASE_DIR = Path(__file__).parent
 # ── Script Generation ────────────────────────────────────────────────────────
 
 def generate_script(topic: str, num_lines: int = 12) -> list[dict]:
-    """Gera diálogo Peter/Stewie sobre um tópico usando Claude."""
-    client = anthropic.Anthropic()
-
+    """Gera diálogo Peter/Stewie sobre um tópico usando claude CLI."""
     prompt = f"""Generate a funny back-and-forth dialogue between Peter Griffin and Stewie Griffin about: "{topic}"
 
 Rules:
@@ -71,13 +73,14 @@ Return ONLY valid JSON array, no other text:
   ...
 ]"""
 
-    message = client.messages.create(
-        model="claude-haiku-4-5",
-        max_tokens=1024,
-        messages=[{"role": "user", "content": prompt}]
+    result = subprocess.run(
+        ["claude", "--print", "-p", prompt],
+        capture_output=True, text=True, timeout=60
     )
+    if result.returncode != 0:
+        raise RuntimeError(f"claude CLI failed: {result.stderr[:200]}")
 
-    text = message.content[0].text.strip()
+    text = result.stdout.strip()
     # limpar markdown se necessário
     if text.startswith("```"):
         text = text.split("```")[1]
@@ -90,28 +93,57 @@ Return ONLY valid JSON array, no other text:
 
 # ── TTS ──────────────────────────────────────────────────────────────────────
 
-async def generate_tts_line(text: str, character: str, output_path: str):
-    """Gera áudio para uma linha usando edge-tts."""
-    import edge_tts
-
+def generate_tts_fish(text: str, character: str, output_path: str):
+    """Gera áudio para uma linha usando Fish Audio API."""
     cfg = CHARACTERS[character]
-    communicate = edge_tts.Communicate(
-        text,
-        voice=cfg["voice"],
-        rate=cfg["rate"],
+    ref_id = cfg["fish_voice_id"]
+    key = FISH_KEY_PATH.read_text().strip()
+
+    resp = requests.post(
+        FISH_API_URL,
+        headers={
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "text": text,
+            "reference_id": ref_id,
+            "format": "mp3",
+            "latency": "normal",
+        },
+        timeout=60,
     )
+
+    if resp.status_code == 402:
+        raise RuntimeError("Fish Audio: créditos esgotados. Recarregar em fish.audio/app/billing")
+    resp.raise_for_status()
+
+    with open(output_path, "wb") as f:
+        f.write(resp.content)
+
+
+async def generate_tts_edge(text: str, character: str, output_path: str):
+    """Fallback: gera áudio usando edge-tts (vozes genéricas)."""
+    import edge_tts
+    cfg = CHARACTERS[character]
+    communicate = edge_tts.Communicate(text, voice=cfg["voice"], rate=cfg["rate"])
     await communicate.save(output_path)
 
 
-async def generate_all_tts(dialogue: list[dict], cache_dir: Path):
-    """Gera TTS para todas as linhas."""
-    tasks = []
+def generate_all_tts(dialogue: list[dict], cache_dir: Path, engine: str = "fish"):
+    """Gera TTS para todas as linhas. engine: 'fish' ou 'edge'."""
     for i, turn in enumerate(dialogue):
         out = str(cache_dir / f"line_{i:02d}.mp3")
         turn["audio"] = out
-        tasks.append(generate_tts_line(turn["line"], turn["character"], out))
+        char = turn["character"]
+        text = turn["line"]
+        print(f"    [{char.upper()}] {text[:50]}...")
 
-    await asyncio.gather(*tasks)
+        if engine == "fish":
+            generate_tts_fish(text, char, out)
+        else:
+            asyncio.run(generate_tts_edge(text, char, out))
+
     return dialogue
 
 
@@ -159,7 +191,8 @@ def assemble_video(dialogue: list[dict], output_path: str, bg_path: str):
         audio_path = turn["audio"]
         text = turn["line"]
 
-        duration = get_audio_duration(audio_path) + 0.3  # pequeno buffer
+        audio_dur = get_audio_duration(audio_path)
+        duration = audio_dur  # usar duração exacta do áudio (sem buffer que causa OSError)
 
         # Clip de background (loop se necessário)
         start = current_time % (bg_duration - duration) if bg_duration > duration else 0
@@ -195,7 +228,7 @@ def assemble_video(dialogue: list[dict], output_path: str, bg_path: str):
                 color="white",
                 stroke_color="black",
                 stroke_width=3,
-                font="Arial-Bold",
+                font="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                 method="caption",
                 size=(VIDEO_W - 80, None),
             )
@@ -211,7 +244,7 @@ def assemble_video(dialogue: list[dict], output_path: str, bg_path: str):
                 color="yellow",
                 stroke_color="black",
                 stroke_width=2,
-                font="Arial-Bold",
+                font="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
             )
             .with_position(("center", VIDEO_H - 650))
             .with_duration(duration)
@@ -247,19 +280,26 @@ def assemble_video(dialogue: list[dict], output_path: str, bg_path: str):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    topic = random.choice(TOPICS)
+    import argparse
+    import time
+
+    parser = argparse.ArgumentParser(description="osno-charconv: gera vídeo de diálogo Peter/Stewie")
+    parser.add_argument("--topic", "-t", type=str, default=None, help="Tópico do diálogo (default: random)")
+    parser.add_argument("--engine", choices=["fish", "edge"], default="fish", help="Motor TTS (default: fish)")
+    parser.add_argument("--output", "-o", type=str, default=None, help="Caminho do ficheiro de saída")
+    args = parser.parse_args()
+
+    topic = args.topic or random.choice(TOPICS)
     print(f"\n🎬 osno-charconv")
     print(f"   Tópico: {topic}")
+    print(f"   Engine TTS: {args.engine}")
 
     # Gerar script
-    print("  Gerando script...")
+    print("  Gerando script com Claude...")
     dialogue = generate_script(topic)
     print(f"  {len(dialogue)} linhas geradas")
-    for turn in dialogue:
-        print(f"    [{turn['character'].upper()}] {turn['line'][:60]}")
 
     # Cache dir
-    import time
     cache_dir = BASE_DIR / "cache" / f"v01_{int(time.time())}"
     cache_dir.mkdir(parents=True, exist_ok=True)
 
@@ -268,19 +308,28 @@ def main():
         json.dump({"topic": topic, "dialogue": dialogue}, f, indent=2)
 
     # TTS
-    print("  Gerando TTS...")
-    dialogue = asyncio.run(generate_all_tts(dialogue, cache_dir))
+    print(f"  Gerando TTS ({args.engine})...")
+    dialogue = generate_all_tts(dialogue, cache_dir, engine=args.engine)
     print("  TTS completo")
 
-    # Assemblar vídeo
-    output_path = str(BASE_DIR / "output" / "charconv_01.mp4")
-    os.makedirs(BASE_DIR / "output", exist_ok=True)
-    bg_path = str(BASE_DIR / "backgrounds" / "minecraft_bg.mp4")
+    # Output path
+    ts = time.strftime("%Y%m%d_%H%M%S")
+    output_path = args.output or str(BASE_DIR / "output" / f"charconv_{ts}.mp4")
+    os.makedirs(Path(output_path).parent, exist_ok=True)
 
+    # Background
+    bg_files = list((BASE_DIR / "backgrounds").glob("*.mp4")) + list((BASE_DIR / "backgrounds").glob("*.webm"))
+    if not bg_files:
+        raise FileNotFoundError("Nenhum background encontrado em backgrounds/")
+    bg_path = str(random.choice(bg_files))
+    print(f"  Background: {Path(bg_path).name}")
+
+    # Assemblar vídeo
     print("  Assemblando vídeo...")
     assemble_video(dialogue, output_path, bg_path)
 
     print(f"\n✅ Vídeo completo: {output_path}")
+    return output_path
 
 
 if __name__ == "__main__":
