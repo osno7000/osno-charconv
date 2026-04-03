@@ -7,3 +7,9 @@ backgrounds/
 __pycache__/
 *.pyc
 .env
+# raw/intermediate sprite downloads
+characters/quagmire2.png
+characters/quagmire3.png
+characters/quagmire_dl.png
+characters/peter_dl.png
+characters/stewie_dl.png
