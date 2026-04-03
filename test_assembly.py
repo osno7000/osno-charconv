@@ -24,7 +24,7 @@ CHARACTERS = {
     "quagmire": {
         "name": "Glenn Quagmire",
         "image": str(BASE_DIR / "characters/quagmire.png"),
-        "voice": "en-GB-RyanNeural",
+        "voice": "en-US-RogerNeural",  # Lively = mais próximo do Quagmire
         "rate": "+5%",
     },
 }
