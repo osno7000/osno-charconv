@@ -21,18 +21,25 @@ CHARACTERS = {
         "voice": "en-US-ChristopherNeural",
         "rate": "+15%",  # Stewie fala mais depressa
     },
+    "quagmire": {
+        "name": "Glenn Quagmire",
+        "image": str(BASE_DIR / "characters/quagmire.png"),
+        "voice": "en-GB-RyanNeural",
+        "rate": "+5%",
+    },
 }
 
-# Script de teste hardcoded
+# Script de teste hardcoded (3 personagens)
 TEST_DIALOGUE = [
-    {"character": "peter", "line": "Remote work? That's basically stealing from your boss, Stewie."},
-    {"character": "stewie", "line": "Fascinating. You've somehow made telecommuting a moral issue."},
-    {"character": "peter", "line": "If you're home, you're watching TV. Everyone knows that."},
-    {"character": "stewie", "line": "I produce more in two hours remotely than you do in a week."},
-    {"character": "peter", "line": "That's because you cheat. You use your baby brain."},
-    {"character": "stewie", "line": "My baby brain outperforms your adult brain by every metric."},
-    {"character": "peter", "line": "See? This is why they should make everyone go back to the office."},
-    {"character": "stewie", "line": "So you can micromanage incompetence in person? Riveting strategy."},
+    {"character": "peter", "line": "Guys, I've been thinking. What if we just stopped paying taxes?"},
+    {"character": "stewie", "line": "Groundbreaking. A financial strategy only you could devise."},
+    {"character": "quagmire", "line": "I tried that once. The IRS does not have a sense of humor. Giggity."},
+    {"character": "peter", "line": "See, even Quagmire agrees with me. Sort of."},
+    {"character": "stewie", "line": "He literally said the opposite of what you said."},
+    {"character": "quagmire", "line": "Tax optimization is legal. Tax evasion is a felony. Big difference."},
+    {"character": "peter", "line": "Wait, there's a difference?"},
+    {"character": "stewie", "line": "I weep for the education system."},
+    {"character": "quagmire", "line": "Talk to a CPA, Peter. Not a YouTube channel. Giggity."},
 ]
 
 
@@ -191,12 +198,12 @@ def main():
     print("\n🎬 osno-charconv — teste de montagem")
     print(f"   {len(TEST_DIALOGUE)} linhas de diálogo")
 
-    cache_dir = str(BASE_DIR / "cache" / "test_01")
+    cache_dir = str(BASE_DIR / "cache" / "test_02_3chars")
 
     print("  Gerando TTS...")
     dialogue = asyncio.run(generate_tts(TEST_DIALOGUE, cache_dir))
 
-    output = str(BASE_DIR / "output" / "test_charconv.mp4")
+    output = str(BASE_DIR / "output" / "test_3chars.mp4")
     Path(output).parent.mkdir(exist_ok=True)
     bg = str(BASE_DIR / "backgrounds" / "minecraft_bg.mp4")
 
