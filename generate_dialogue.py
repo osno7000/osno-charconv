@@ -36,6 +36,14 @@ CHARACTERS = {
         "fish_voice_id": "e91c4f5974f149478a35affe820d02ac",  # Stewie Griffin Fish Audio
         "color": (200, 60, 60),
     },
+    "quagmire": {
+        "name": "Glenn Quagmire",
+        "image": "characters/quagmire.png",
+        "voice": "en-US-RogerNeural",  # fallback edge-tts (Lively)
+        "rate": "+5%",
+        "fish_voice_id": None,  # não disponível no Fish Audio — usar edge-tts
+        "color": (180, 120, 30),
+    },
 }
 
 TOPICS = [
