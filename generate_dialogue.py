@@ -31,7 +31,7 @@ CHARACTERS = {
     "stewie": {
         "name": "Stewie Griffin",
         "image": "characters/stewie.png",
-        "voice": "en-US-RyanMultilingualNeural",  # fallback edge-tts
+        "voice": "en-US-ChristopherNeural",  # fallback edge-tts (Stewie)
         "rate": "+10%",
         "fish_voice_id": "e91c4f5974f149478a35affe820d02ac",  # Stewie Griffin Fish Audio
         "color": (200, 60, 60),
