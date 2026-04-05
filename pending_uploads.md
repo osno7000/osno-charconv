@@ -91,7 +91,7 @@ Peter thinks minimum wage should be $25. Stewie has a spreadsheet. 💵
 
 ---
 
-## Batch 8 (parcialmente pronto — 2026-04-05)
+## Batch 8 (prontos — 2026-04-05)
 
 ### charconv_immig_econ.mp4
 **Descrição:**
