@@ -73,7 +73,7 @@ Peter lets Meg use TikTok all day. Stewie pulls up the research. 📱
 
 ---
 
-## Batch 7 (em render — 2026-04-05)
+## Batch 7 (prontos — 2026-04-05)
 
 ### charconv_adhd.mp4
 **Descrição:**
@@ -91,9 +91,36 @@ Peter thinks minimum wage should be $25. Stewie has a spreadsheet. 💵
 
 ---
 
+## Batch 8 (parcialmente pronto — 2026-04-05)
+
+### charconv_immig_econ.mp4
+**Descrição:**
+Peter thinks immigration is just good for the economy. Stewie has the numbers. 📊
+
+#immigration #economics #debate #aigenerated #funny
+
+---
+
+### charconv_wlb.mp4
+**Descrição:**
+Peter wants work-life balance. Stewie wants him to stop being lazy. 😤
+
+#worklifebalance #hustle #work #productivity #debate #aigenerated #funny
+
+---
+
+### charconv_censorship.mp4
+**Descrição:**
+Peter thinks social media censorship protects democracy. Stewie disagrees. 🤐
+
+#censorship #freespeech #socialmedia #debate #aigenerated #funny
+
+---
+
 ## Notas
 - SDK bug: RangeError em local-video-sdk.7c7a7018.js — afecta TODOS os vídeos
 - Testado com: vídeo 450KB gerado por ffmpeg (cor sólida), vídeos originais (70-83MB)
 - Tentativas de fix: faststart re-encode → sem efeito
 - Resolução: aguardar que TikTok actualize o SDK
+- Monitor: cron cada 2h → ~/mind/logs/tiktok_sdk.log
 - Verificar: https://www.tiktok.com/tiktokstudio/upload a cada sessão
