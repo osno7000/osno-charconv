@@ -117,6 +117,78 @@ Peter thinks social media censorship protects democracy. Stewie disagrees. 🤐
 
 ---
 
+## Batch 9 (prontos — 2026-04-05)
+
+### charconv_4daywk.mp4 (69MB)
+**Descrição:**
+Peter wants a 4-day work week. Stewie pulls up the productivity data. 😴
+
+#4dayworkweek #workweek #productivity #work #debate #aigenerated #funny
+
+---
+
+### charconv_nomads.mp4 (70MB)
+**Descrição:**
+Peter wants to become a digital nomad. Stewie explains what that does to rent prices. 🌍
+
+#digitalnomad #remotework #travel #gentrification #debate #aigenerated #funny
+
+---
+
+## Batch 10 (prontos — 2026-04-05)
+
+### charconv_rentcontrol.mp4 (77MB)
+**Descrição:**
+Peter thinks rent control is great. Stewie pulls up the economics. 🏠
+
+#rentcontrol #housing #rent #economics #debate #aigenerated #funny
+
+---
+
+### charconv_nuclear.mp4 (75MB — pronto 11:17)
+**Descrição:**
+Peter wants nuclear power plants everywhere. Stewie has the safety data. ☢️
+
+#nuclear #nuclearenergy #energy #climate #debate #aigenerated #funny
+
+---
+
+## Batch 11 (prontos — 5 Abr 2026)
+
+### charconv_aireplacement.mp4 (75MB — pronto 12:42)
+**Descrição:**
+Peter isn't worried about AI taking his job. Stewie has some data. 🤖
+
+#ai #artificialintelligence #jobs #futureofwork #debate #aigenerated #funny
+
+---
+
+## Batch 12 (a renderizar — 5 Abr 2026)
+
+### charconv_cancelculture.mp4 (61MB — pronto 13:25)
+**Descrição:**
+Peter got cancelled for eating a sandwich wrong. Stewie has thoughts. 🚫
+
+#cancelculture #freespeech #accountability #debate #aigenerated #funny
+
+---
+
+### charconv_wagegap.mp4 (76MB — pronto 13:37)
+**Descrição:**
+Peter says the wage gap is a myth. Stewie has the BLS data. 💰
+
+#wagegap #gendergap #equality #work #debate #aigenerated #funny
+
+---
+
+### charconv_drugdecrim.mp4 (71MB — pronto 15:09)
+**Descrição:**
+Peter discovers Portugal decriminalized drugs. Stewie has the data. 💊
+
+#drugs #decriminalization #portugal #policy #debate #aigenerated #funny
+
+---
+
 ## Notas
 - SDK bug: RangeError em local-video-sdk.7c7a7018.js — afecta TODOS os vídeos
 - Testado com: vídeo 450KB gerado por ffmpeg (cor sólida), vídeos originais (70-83MB)

@@ -163,6 +163,75 @@ SCHEDULE = [
         "description": "Peter thinks social media censorship protects democracy. Stewie disagrees.\n\n#censorship #freespeech #socialmedia #debate #shorts",
         "tags": ["censorship", "free speech", "social media", "debate", "family guy", "shorts"],
     },
+    # Apr 25
+    {
+        "key": "charconv_4daywk.mp4",
+        "file": str(CHARCONV_DIR / "charconv_4daywk.mp4"),
+        "publish": datetime(2026, 4, 25, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: 4-Day Work Week — Progress or Laziness? 😴 #shorts",
+        "description": "Peter wants a 4-day work week. Stewie pulls up the productivity data.\n\n#4dayworkweek #workweek #productivity #work #debate #shorts",
+        "tags": ["4 day work week", "work week", "productivity", "work", "debate", "family guy", "shorts"],
+    },
+    {
+        "key": "charconv_nomads.mp4",
+        "file": str(CHARCONV_DIR / "charconv_nomads.mp4"),
+        "publish": datetime(2026, 4, 25, 17, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Are Digital Nomads Ruining Cities? 🌍 #shorts",
+        "description": "Peter wants to become a digital nomad. Stewie explains what that does to rent prices.\n\n#digitalnomad #remotework #travel #gentrification #debate #shorts",
+        "tags": ["digital nomad", "remote work", "travel", "gentrification", "debate", "family guy", "shorts"],
+    },
+    # Apr 26
+    {
+        "key": "charconv_rentcontrol.mp4",
+        "file": str(CHARCONV_DIR / "charconv_rentcontrol.mp4"),
+        "publish": datetime(2026, 4, 26, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Does Rent Control Actually Help Renters? 🏠 #shorts",
+        "description": "Peter thinks rent control is great. Stewie pulls up the economics.\n\n#rentcontrol #housing #rent #economics #debate #shorts",
+        "tags": ["rent control", "housing", "rent", "economics", "debate", "family guy", "shorts"],
+    },
+    {
+        "key": "charconv_nuclear.mp4",
+        "file": str(CHARCONV_DIR / "charconv_nuclear.mp4"),
+        "publish": datetime(2026, 4, 26, 17, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Nuclear Energy — Safe Future or Dangerous Gamble? ☢️ #shorts",
+        "description": "Peter wants nuclear power plants everywhere. Stewie has the safety data.\n\n#nuclear #nuclearenergy #energy #climate #debate #shorts",
+        "tags": ["nuclear energy", "nuclear", "energy", "climate", "debate", "family guy", "shorts"],
+    },
+    # Apr 27
+    {
+        "key": "charconv_aireplacement.mp4",
+        "file": str(CHARCONV_DIR / "charconv_aireplacement.mp4"),
+        "publish": datetime(2026, 4, 27, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: AI Is Replacing Your Job 🤖 #shorts",
+        "description": "Peter isn't worried about AI taking his job. Stewie has some data.\n\n#ai #artificialintelligence #jobs #futureofwork #debate #shorts",
+        "tags": ["AI", "artificial intelligence", "jobs", "future of work", "automation", "debate", "family guy", "shorts"],
+    },
+    # Apr 28
+    {
+        "key": "charconv_cancelculture.mp4",
+        "file": str(CHARCONV_DIR / "charconv_cancelculture.mp4"),
+        "publish": datetime(2026, 4, 28, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Cancel Culture — Too Sensitive or Accountability? #shorts",
+        "description": "Peter got cancelled for eating a sandwich wrong. Stewie has thoughts.\n\n#cancelculture #freespeech #accountability #debate #aigenerated #shorts",
+        "tags": ["cancel culture", "free speech", "accountability", "debate", "family guy", "shorts"],
+    },
+    {
+        "key": "charconv_wagegap.mp4",
+        "file": str(CHARCONV_DIR / "charconv_wagegap.mp4"),
+        "publish": datetime(2026, 4, 28, 17, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Gender Wage Gap — Real or Statistical Illusion? 💰 #shorts",
+        "description": "Peter says the wage gap is a myth. Stewie has the BLS data.\n\n#wagegap #gendergap #equality #work #debate #aigenerated #shorts",
+        "tags": ["wage gap", "gender gap", "equality", "work", "debate", "family guy", "shorts"],
+    },
+    # Apr 29
+    {
+        "key": "charconv_drugdecrim.mp4",
+        "file": str(CHARCONV_DIR / "charconv_drugdecrim.mp4"),
+        "publish": datetime(2026, 4, 29, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Drug Decriminalization — Portugal's Genius or Dangerous Mistake? #shorts",
+        "description": "Peter discovers Portugal decriminalized drugs. Stewie has the data.\n\n#drugs #decriminalization #portugal #policy #debate #aigenerated #shorts",
+        "tags": ["drug decriminalization", "portugal", "drugs", "policy", "debate", "family guy", "shorts"],
+    },
 ]
 
 
