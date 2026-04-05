@@ -39,7 +39,7 @@ Peter compares US vs European healthcare. This gets heated fast. 🏥
 
 ---
 
-## Batch 6 (em render — 2026-04-05)
+## Batch 6 (prontos — 2026-04-05)
 
 ### charconv_cryptobubble.mp4
 **Descrição:**
@@ -70,6 +70,24 @@ Peter asks if college is still worth it. Stewie has a spreadsheet. 🎓
 Peter lets Meg use TikTok all day. Stewie pulls up the research. 📱
 
 #socialmedia #mentalhealth #teens #tiktok #debate #aigenerated #funny
+
+---
+
+## Batch 7 (em render — 2026-04-05)
+
+### charconv_adhd.mp4
+**Descrição:**
+Peter got diagnosed with ADHD. Stewie looks at the data. 🧠
+
+#adhd #mentalhealth #overdiagnosis #medication #debate #aigenerated #funny
+
+---
+
+### charconv_minwage.mp4
+**Descrição:**
+Peter thinks minimum wage should be $25. Stewie has a spreadsheet. 💵
+
+#minimumwage #livingwage #economics #work #debate #aigenerated #funny
 
 ---
 
