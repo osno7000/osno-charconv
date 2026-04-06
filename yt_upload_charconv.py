@@ -232,6 +232,60 @@ SCHEDULE = [
         "description": "Peter discovers Portugal decriminalized drugs. Stewie has the data.\n\n#drugs #decriminalization #portugal #policy #debate #aigenerated #shorts",
         "tags": ["drug decriminalization", "portugal", "drugs", "policy", "debate", "family guy", "shorts"],
     },
+    # Apr 30
+    {
+        "key": "charconv_veganism.mp4",
+        "file": str(CHARCONV_DIR / "charconv_veganism.mp4"),
+        "publish": datetime(2026, 4, 30, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Veganism — Moral Imperative or Annoying Lifestyle? 🥩 #shorts",
+        "description": "Peter thinks vegans are just bad at eating. Stewie has thoughts on meat consumption.\n\n#veganism #vegan #meat #diet #debate #aigenerated #shorts",
+        "tags": ["veganism", "vegan", "meat", "diet", "debate", "family guy", "shorts"],
+    },
+    # May 1
+    {
+        "key": "charconv_studentloans.mp4",
+        "file": str(CHARCONV_DIR / "charconv_studentloans.mp4"),
+        "publish": datetime(2026, 5, 1, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Student Loan Forgiveness — Fair Relief or Moral Hazard? 🎓 #shorts",
+        "description": "Peter wants his student loans cancelled. Stewie has thoughts on who actually pays.\n\n#studentloans #studentloanforgiveness #college #debt #debate #aigenerated #shorts",
+        "tags": ["student loans", "student loan forgiveness", "college", "debt", "debate", "family guy", "shorts"],
+    },
+    # May 2
+    {
+        "key": "charconv_electricvehicles.mp4",
+        "file": str(CHARCONV_DIR / "charconv_electricvehicles.mp4"),
+        "publish": datetime(2026, 5, 2, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Electric Vehicles — Green Future or Overpriced Hype? ⚡ #shorts",
+        "description": "Peter questions whether EVs are worth it. Stewie has opinions on batteries and subsidies.\n\n#electricvehicles #ev #tesla #climatechange #debate #aigenerated #shorts",
+        "tags": ["electric vehicles", "EV", "Tesla", "climate change", "debate", "family guy", "shorts"],
+    },
+    # May 3
+    {
+        "key": "charconv_japan_robots.mp4",
+        "file": str(CHARCONV_DIR / "charconv_japan_robots.mp4"),
+        "publish": datetime(2026, 5, 3, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Japan's Robots Don't Take Jobs — They Do the Ones Nobody Wants 🤖 #shorts",
+        "description": "Peter thinks robots are here to steal jobs. Stewie explains what's actually happening in Japan.\n\n#japan #robots #automation #futureofwork #ai #debate #aigenerated #shorts",
+        "tags": ["japan", "robots", "automation", "future of work", "AI", "jobs", "debate", "family guy", "shorts"],
+    },
+    # May 4
+    {
+        "key": "charconv_salary_data.mp4",
+        "file": str(CHARCONV_DIR / "charconv_salary_data.mp4"),
+        "publish": datetime(2026, 5, 4, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Your Boss Knows How Desperate You Are 👁️ #shorts",
+        "description": "Peter discovers employers use his personal data to figure out the lowest salary he'll accept. Stewie has thoughts on surveillance wages.\n\n#salary #privacy #surveillance #jobs #work #debate #aigenerated #shorts",
+        "tags": ["salary", "privacy", "surveillance wages", "jobs", "work", "personal data", "debate", "family guy", "shorts"],
+    },
+    # May 5
+    {
+        "key": "charconv_ai_devs.mp4",
+        "file": str(CHARCONV_DIR / "charconv_ai_devs.mp4"),
+        "publish": datetime(2026, 5, 5, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: AI Is Replacing Junior Developers 💻 #shorts",
+        "description": "Peter's nephew just got a CS degree. Stewie explains what Claude costs per month.\n\n#ai #coding #softwaredevelopment #juniordev #futureofwork #debate #aigenerated #shorts",
+        "tags": ["AI", "coding", "software development", "junior developer", "future of work", "automation", "debate", "family guy", "shorts"],
+    },
 ]
 
 
