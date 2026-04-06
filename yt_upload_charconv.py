@@ -340,6 +340,24 @@ SCHEDULE = [
         "description": "Peter thinks 16-year-olds can't even do their own laundry. Stewie points out they'll live with the consequences longer than anyone.\n\n#votingage #democracy #politics #teens #debate #aigenerated #shorts",
         "tags": ["voting age", "democracy", "politics", "teens", "civic rights", "debate", "family guy", "shorts"],
     },
+    # May 12
+    {
+        "key": "charconv_gigeconomy.mp4",
+        "file": str(CHARCONV_DIR / "charconv_gigeconomy.mp4"),
+        "publish": datetime(2026, 5, 12, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Gig Economy — Freedom or Exploitation? 🚗 #shorts",
+        "description": "Peter loves the flexibility of driving Uber between shifts. Stewie explains what happens when there are no benefits, no sick days, and no floor.\n\n#gigeconomy #uber #deliveroo #freelance #work #exploitation #debate #aigenerated #shorts",
+        "tags": ["gig economy", "uber", "deliveroo", "freelance", "work", "exploitation", "debate", "family guy", "shorts"],
+    },
+    # May 13
+    {
+        "key": "charconv_maxwage.mp4",
+        "file": str(CHARCONV_DIR / "charconv_maxwage.mp4"),
+        "publish": datetime(2026, 5, 13, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should There Be a Maximum Wage? 💸 #shorts",
+        "description": "Peter thinks there's no such thing as too much money. Stewie asks why minimum wages are acceptable but maximum wages are radical.\n\n#maxwage #minimumwage #inequality #wages #economy #debate #aigenerated #shorts",
+        "tags": ["maximum wage", "minimum wage", "inequality", "wages", "economy", "debate", "family guy", "shorts"],
+    },
 ]
 
 
