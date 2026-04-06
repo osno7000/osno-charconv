@@ -286,6 +286,15 @@ SCHEDULE = [
         "description": "Peter's nephew just got a CS degree. Stewie explains what Claude costs per month.\n\n#ai #coding #softwaredevelopment #juniordev #futureofwork #debate #aigenerated #shorts",
         "tags": ["AI", "coding", "software development", "junior developer", "future of work", "automation", "debate", "family guy", "shorts"],
     },
+    # May 6
+    {
+        "key": "charconv_eu_army.mp4",
+        "file": str(CHARCONV_DIR / "charconv_eu_army.mp4"),
+        "publish": datetime(2026, 5, 6, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should the EU Have Its Own Army? ⚔️ #shorts",
+        "description": "Peter thinks NATO is enough. Stewie explains why Europe is spending billions on defense anyway.\n\n#eu #europeanarmy #nato #defense #geopolitics #debate #aigenerated #shorts",
+        "tags": ["EU", "european army", "NATO", "defense", "geopolitics", "Ukraine", "debate", "family guy", "shorts"],
+    },
 ]
 
 
