@@ -358,6 +358,15 @@ SCHEDULE = [
         "description": "Peter thinks there's no such thing as too much money. Stewie asks why minimum wages are acceptable but maximum wages are radical.\n\n#maxwage #minimumwage #inequality #wages #economy #debate #aigenerated #shorts",
         "tags": ["maximum wage", "minimum wage", "inequality", "wages", "economy", "debate", "family guy", "shorts"],
     },
+    # May 14
+    {
+        "key": "charconv_aicoders.mp4",
+        "file": str(CHARCONV_DIR / "charconv_aicoders.mp4"),
+        "publish": datetime(2026, 5, 14, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is AI Making Programmers Worse? 🤖 #shorts",
+        "description": "Peter says AI is making coding easier for everyone. Stewie argues developers are losing the ability to code without AI assistance — and that's a problem.\n\n#AI #coding #developers #programming #aicoding #debate #aigenerated #shorts",
+        "tags": ["AI", "programming", "coding", "developers", "AI tools", "software", "debate", "family guy", "shorts"],
+    },
 ]
 
 

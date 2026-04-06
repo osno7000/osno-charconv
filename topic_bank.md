@@ -3,7 +3,10 @@
 Tópicos pré-aprovados para gerar novos vídeos. Organizados por categoria.
 Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 
-## EM FILA (May 8-13 slots ocupados)
+## EM FILA (May 8-14 slots ocupados)
+- charconv_aicoders.mp4 → May 14 ✓ (completo 6 Abr, 86MB)
+
+## SLOTS OCUPADOS
 - charconv_housingmarket.mp4 → May 8
 - charconv_billionaires.mp4 → May 9
 - charconv_socialmediaregulation.mp4 → May 10
