@@ -322,6 +322,24 @@ SCHEDULE = [
         "description": "Peter thinks extreme wealth is just success at scale. Stewie has questions about how the system actually works.\n\n#billionaires #wealth #inequality #capitalism #economy #debate #aigenerated #shorts",
         "tags": ["billionaires", "wealth", "inequality", "capitalism", "economy", "debate", "family guy", "shorts"],
     },
+    # May 10
+    {
+        "key": "charconv_socialmediaregulation.mp4",
+        "file": str(CHARCONV_DIR / "charconv_socialmediaregulation.mp4"),
+        "publish": datetime(2026, 5, 10, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should Social Media Be Regulated? 📱 #shorts",
+        "description": "Peter thinks regulating social media is censorship. Stewie explains why letting a few billionaires control global speech might be worse.\n\n#socialmedia #regulation #freespeech #tech #censorship #debate #aigenerated #shorts",
+        "tags": ["social media", "regulation", "free speech", "tech", "censorship", "platform", "debate", "family guy", "shorts"],
+    },
+    # May 11
+    {
+        "key": "charconv_votingage.mp4",
+        "file": str(CHARCONV_DIR / "charconv_votingage.mp4"),
+        "publish": datetime(2026, 5, 11, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should the Voting Age Be Lowered to 16? 🗳️ #shorts",
+        "description": "Peter thinks 16-year-olds can't even do their own laundry. Stewie points out they'll live with the consequences longer than anyone.\n\n#votingage #democracy #politics #teens #debate #aigenerated #shorts",
+        "tags": ["voting age", "democracy", "politics", "teens", "civic rights", "debate", "family guy", "shorts"],
+    },
 ]
 
 
