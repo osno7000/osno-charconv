@@ -9,7 +9,7 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 - charconv_socialmediaregulation.mp4 → May 10
 - charconv_votingage.mp4 → May 11 ✓ (completo 6 Abr)
 - charconv_gigeconomy.mp4 → May 12 ✓ (completo 6 Abr)
-- charconv_maxwage.mp4 → May 13 (a renderizar 6 Abr)
+- charconv_maxwage.mp4 → May 13 ✓ (completo 6 Abr)
 
 ---
 
