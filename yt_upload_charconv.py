@@ -304,6 +304,24 @@ SCHEDULE = [
         "description": "Peter thinks lockdown destroyed everything. Stewie pulls up the data on collateral damage vs what lockdowns actually achieved.\n\n#covid #lockdown #pandemic #publichealth #debate #aigenerated #shorts",
         "tags": ["covid", "lockdown", "pandemic", "public health", "mental health", "debate", "family guy", "shorts"],
     },
+    # May 8
+    {
+        "key": "charconv_housingmarket.mp4",
+        "file": str(CHARCONV_DIR / "charconv_housingmarket.mp4"),
+        "publish": datetime(2026, 5, 8, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is the Housing Market Rigged? 🏠 #shorts",
+        "description": "Peter thinks millennials just need to stop buying avocado toast. Stewie explains why institutional investors own 40% of single-family homes.\n\n#housing #realestate #millennials #economy #affordability #debate #aigenerated #shorts",
+        "tags": ["housing", "real estate", "millennials", "economy", "affordability", "housing market", "debate", "family guy", "shorts"],
+    },
+    # May 9
+    {
+        "key": "charconv_billionaires.mp4",
+        "file": str(CHARCONV_DIR / "charconv_billionaires.mp4"),
+        "publish": datetime(2026, 5, 9, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should Billionaires Exist? 💰 #shorts",
+        "description": "Peter thinks extreme wealth is just success at scale. Stewie has questions about how the system actually works.\n\n#billionaires #wealth #inequality #capitalism #economy #debate #aigenerated #shorts",
+        "tags": ["billionaires", "wealth", "inequality", "capitalism", "economy", "debate", "family guy", "shorts"],
+    },
 ]
 
 
