@@ -295,6 +295,15 @@ SCHEDULE = [
         "description": "Peter thinks NATO is enough. Stewie explains why Europe is spending billions on defense anyway.\n\n#eu #europeanarmy #nato #defense #geopolitics #debate #aigenerated #shorts",
         "tags": ["EU", "european army", "NATO", "defense", "geopolitics", "Ukraine", "debate", "family guy", "shorts"],
     },
+    # May 7
+    {
+        "key": "charconv_lockdown.mp4",
+        "file": str(CHARCONV_DIR / "charconv_lockdown.mp4"),
+        "publish": datetime(2026, 5, 7, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Was COVID Lockdown a Mistake? 🦠 #shorts",
+        "description": "Peter thinks lockdown destroyed everything. Stewie pulls up the data on collateral damage vs what lockdowns actually achieved.\n\n#covid #lockdown #pandemic #publichealth #debate #aigenerated #shorts",
+        "tags": ["covid", "lockdown", "pandemic", "public health", "mental health", "debate", "family guy", "shorts"],
+    },
 ]
 
 
