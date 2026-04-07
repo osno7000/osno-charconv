@@ -3,8 +3,14 @@
 Tópicos pré-aprovados para gerar novos vídeos. Organizados por categoria.
 Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 
-## EM FILA (May 8-14 slots ocupados)
+## EM FILA (May 8-17 slots ocupados)
 - charconv_aicoders.mp4 → May 14 ✓ (completo 6 Abr, 86MB)
+- charconv_inflation.mp4 → May 15 ✓ (completo 7 Abr, 38MB)
+- charconv_eu_sovereignty.mp4 → May 16 ✓ (completo 7 Abr, 36MB)
+- charconv_llmintelligence.mp4 → May 17 ✓ (completo 6 Abr, ~70MB)
+- charconv_socialmedia2.mp4 → May 20 ✓ (completo 7 Abr, 85MB)
+- charconv_automation.mp4 → May 21 ✓ (completo 7 Abr, 90MB)
+- charconv_freetrade.mp4 → May 22 (gerando 7 Abr, PID 411078)
 
 ## SLOTS OCUPADOS
 - charconv_housingmarket.mp4 → May 8
@@ -43,7 +49,6 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 ```
 "Is gig economy freedom or exploitation? Uber drivers vs employees."
 "Should there be a maximum wage? If there's a minimum, why not a maximum?"
-"Is automation destroying jobs or creating better ones? The optimist vs pessimist case."
 "Should inheritance be taxed at 100%? Is inherited wealth earned wealth?"
 "Is free trade actually free? Who wins and who loses from globalization?"
 "Should banks be nationalized? Are private banks a public risk?"
@@ -63,6 +68,7 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 - charconv_salary_data.mp4
 - charconv_billionaires.mp4
 - charconv_housingmarket.mp4
+- charconv_automation.mp4
 
 ---
 
@@ -170,6 +176,11 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 - charconv_replication.mp4
 - charconv_ubi_web.mp4
 - charconv_healthcare.mp4
+- charconv_inflation.mp4
+- charconv_eu_sovereignty.mp4
+- charconv_politiciansalary.mp4
+- charconv_airights.mp4
+- charconv_socialmedia2.mp4
 
 ---
 

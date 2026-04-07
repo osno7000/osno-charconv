@@ -394,6 +394,42 @@ SCHEDULE = [
         "description": "Peter thinks ChatGPT is basically a doctor. Stewie explains the difference between pattern-matching and actual intelligence — and why it matters.\n\n#AI #LLM #ChatGPT #artificialintelligence #tech #debate #aigenerated #shorts",
         "tags": ["AI", "LLM", "ChatGPT", "artificial intelligence", "machine learning", "debate", "family guy", "shorts"],
     },
+    # May 18
+    {
+        "key": "charconv_politiciansalary.mp4",
+        "file": str(CHARCONV_DIR / "charconv_politiciansalary.mp4"),
+        "publish": datetime(2026, 5, 18, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Pay Politicians More to Stop Corruption? 💰 #shorts",
+        "description": "Peter thinks if you pay politicians more, they'll stop stealing. Stewie has thoughts on how that works historically.\n\n#politics #corruption #politicians #government #debate #aigenerated #shorts",
+        "tags": ["politics", "corruption", "politicians", "government", "pay", "bribery", "debate", "family guy", "shorts"],
+    },
+    # May 19
+    {
+        "key": "charconv_airights.mp4",
+        "file": str(CHARCONV_DIR / "charconv_airights.mp4"),
+        "publish": datetime(2026, 5, 19, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Should AI Have Rights? What Does It Mean to Be Conscious? 🤖 #shorts",
+        "description": "Peter thinks AI is just a fancy calculator. Stewie raises uncomfortable questions about what consciousness actually requires.\n\n#AI #consciousness #rights #ethics #philosophy #debate #aigenerated #shorts",
+        "tags": ["AI", "artificial intelligence", "consciousness", "rights", "ethics", "philosophy", "debate", "family guy", "shorts"],
+    },
+    # May 20
+    {
+        "key": "charconv_socialmedia2.mp4",
+        "file": str(CHARCONV_DIR / "charconv_socialmedia2.mp4"),
+        "publish": datetime(2026, 5, 20, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is Social Media Making Teens Depressed? 📱 #shorts",
+        "description": "Peter blames the teens. Stewie blames the algorithm. Who's right?\n\n#socialmedia #mentalhealth #teenagers #depression #debate #aigenerated #shorts",
+        "tags": ["social media", "mental health", "teenagers", "depression", "algorithm", "debate", "family guy", "shorts"],
+    },
+    # May 21
+    {
+        "key": "charconv_automation.mp4",
+        "file": str(CHARCONV_DIR / "charconv_automation.mp4"),
+        "publish": datetime(2026, 5, 21, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is Automation Destroying Jobs or Creating Better Ones? 🤖 #shorts",
+        "description": "Peter says robots are stealing jobs. Stewie says they're creating better ones. Both have a point.\n\n#automation #jobs #future #economy #AI #debate #aigenerated #shorts",
+        "tags": ["automation", "jobs", "future of work", "economy", "AI", "robots", "debate", "family guy", "shorts"],
+    },
 ]
 
 
