@@ -367,6 +367,33 @@ SCHEDULE = [
         "description": "Peter says AI is making coding easier for everyone. Stewie argues developers are losing the ability to code without AI assistance — and that's a problem.\n\n#AI #coding #developers #programming #aicoding #debate #aigenerated #shorts",
         "tags": ["AI", "programming", "coding", "developers", "AI tools", "software", "debate", "family guy", "shorts"],
     },
+    # May 15
+    {
+        "key": "charconv_inflation.mp4",
+        "file": str(CHARCONV_DIR / "charconv_inflation.mp4"),
+        "publish": datetime(2026, 5, 15, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is Inflation Just a Hidden Tax? 💸 #shorts",
+        "description": "Peter thinks prices just go up naturally. Stewie explains who actually benefits from devaluing the currency — and it's not you.\n\n#inflation #economy #money #centralbанks #debt #debate #aigenerated #shorts",
+        "tags": ["inflation", "economy", "money", "central banks", "debt", "tax", "debate", "family guy", "shorts"],
+    },
+    # May 16
+    {
+        "key": "charconv_eu_sovereignty.mp4",
+        "file": str(CHARCONV_DIR / "charconv_eu_sovereignty.mp4"),
+        "publish": datetime(2026, 5, 16, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is the EU a Superstate in Disguise? 🇪🇺 #shorts",
+        "description": "Peter loves the EU because he can drive to France without stopping. Stewie explains what sovereignty actually means when Brussels writes your laws.\n\n#EU #EuropeanUnion #sovereignty #politics #europe #debate #aigenerated #shorts",
+        "tags": ["EU", "European Union", "sovereignty", "politics", "Europe", "integration", "debate", "family guy", "shorts"],
+    },
+    # May 17
+    {
+        "key": "charconv_llmintelligence.mp4",
+        "file": str(CHARCONV_DIR / "charconv_llmintelligence.mp4"),
+        "publish": datetime(2026, 5, 17, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Are LLMs Actually Intelligent? 🤖 #shorts",
+        "description": "Peter thinks ChatGPT is basically a doctor. Stewie explains the difference between pattern-matching and actual intelligence — and why it matters.\n\n#AI #LLM #ChatGPT #artificialintelligence #tech #debate #aigenerated #shorts",
+        "tags": ["AI", "LLM", "ChatGPT", "artificial intelligence", "machine learning", "debate", "family guy", "shorts"],
+    },
 ]
 
 
