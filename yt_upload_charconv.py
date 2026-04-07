@@ -430,6 +430,24 @@ SCHEDULE = [
         "description": "Peter says robots are stealing jobs. Stewie says they're creating better ones. Both have a point.\n\n#automation #jobs #future #economy #AI #debate #aigenerated #shorts",
         "tags": ["automation", "jobs", "future of work", "economy", "AI", "robots", "debate", "family guy", "shorts"],
     },
+    # May 22
+    {
+        "key": "charconv_freetrade.mp4",
+        "file": str(CHARCONV_DIR / "charconv_freetrade.mp4"),
+        "publish": datetime(2026, 5, 22, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Is Free Trade Actually Free? Who Wins From Globalization? 🌍 #shorts",
+        "description": "Peter thinks free trade screws workers. Stewie thinks protectionism is worse. The data is complicated.\n\n#freetrade #globalization #economy #tariffs #debate #aigenerated #shorts",
+        "tags": ["free trade", "globalization", "tariffs", "trade war", "economy", "debate", "family guy", "shorts"],
+    },
+    # May 23
+    {
+        "key": "charconv_aidoctors.mp4",
+        "file": str(CHARCONV_DIR / "charconv_aidoctors.mp4"),
+        "publish": datetime(2026, 5, 23, 9, 0, tzinfo=timezone.utc),
+        "title": "Peter vs Stewie: Will AI Replace Doctors or Just Make Bad Ones More Dangerous? 🏥 #shorts",
+        "description": "Peter wants AI to replace his doctor. Stewie worries about what happens to bad doctors with AI.\n\n#AI #doctors #healthcare #medicine #debate #aigenerated #shorts",
+        "tags": ["AI", "doctors", "healthcare", "medicine", "medical AI", "debate", "family guy", "shorts"],
+    },
 ]
 
 

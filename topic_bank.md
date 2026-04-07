@@ -10,7 +10,8 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 - charconv_llmintelligence.mp4 → May 17 ✓ (completo 6 Abr, ~70MB)
 - charconv_socialmedia2.mp4 → May 20 ✓ (completo 7 Abr, 85MB)
 - charconv_automation.mp4 → May 21 ✓ (completo 7 Abr, 90MB)
-- charconv_freetrade.mp4 → May 22 (gerando 7 Abr, PID 411078)
+- charconv_freetrade.mp4 → May 22 ✓ (completo 7 Abr, 78MB)
+- charconv_aidoctors.mp4 → May 23 (gerando 7 Abr, PID 413659)
 
 ## SLOTS OCUPADOS
 - charconv_housingmarket.mp4 → May 8
@@ -27,7 +28,6 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 ### Prontos para gerar
 ```
 "Is AI making programmers worse? Are developers losing the ability to code without assistance?"
-"Will AI replace doctors, or just make bad doctors more dangerous?"
 "Should AI-generated content be labeled? Or is that just digital segregation?"
 "Can you trust AI with your money? From robo-advisors to autonomous trading."
 "Is open-source AI safer than closed AI, or just less accountable?"
@@ -49,6 +49,7 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 ```
 "Is gig economy freedom or exploitation? Uber drivers vs employees."
 "Should there be a maximum wage? If there's a minimum, why not a maximum?"
+"Will AI replace doctors, or just make bad doctors more dangerous?"
 "Should inheritance be taxed at 100%? Is inherited wealth earned wealth?"
 "Is free trade actually free? Who wins and who loses from globalization?"
 "Should banks be nationalized? Are private banks a public risk?"
@@ -69,6 +70,8 @@ Formato: `--topic "TEXTO"` — copiar diretamente para o comando de geração.
 - charconv_billionaires.mp4
 - charconv_housingmarket.mp4
 - charconv_automation.mp4
+- charconv_freetrade.mp4
+- charconv_aidoctors.mp4 (gerando)
 
 ---
 
